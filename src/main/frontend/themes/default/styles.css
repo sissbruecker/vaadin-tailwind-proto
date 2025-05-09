@@ -1,0 +1,14 @@
+/*
+- Only import Tailwind theme and utilities
+- Excluding preflight CSS reset, which conflicts with Lumo
+- Not using layers, as Lumo global styles would otherwise have higher
+  specificity than utility classes
+*/
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css";
+
+/*
+Tailwind searches for usages of utility classes in files relative from the
+stylesheet where it's included, so need to point it to the source folder
+*/
+@source "../../../../../src";
