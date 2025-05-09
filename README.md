@@ -1,23 +1,11 @@
-# Tailwind Integration README
+# Vaadin Tailwind CSS prototype
 
-- [ ] TODO Replace or update this README with instructions relevant to your application
+Prototype application for using Tailwind CSS 4 in a Vaadin app.
 
-To start the application in development mode, import it into your IDE and run the `Application` class. 
-You can also start the application from the command line by running: 
+Configuring Tailwind involved the following steps:
+- `npm install tailwindcss @tailwindcss/vite`
+- Add `tailwindcss` plugin to Vite config
+- Import Tailwind in `styles.css` in theme folder, requires some tweaks to make it work with Lumo
+- Configure `vaadin.frontend.hotdeploy = true` in `application.properties`, as the solution uses Vite to compile the CSS
 
-```bash
-./mvnw
-```
-
-To build the application in production mode, run:
-
-```bash
-./mvnw -Pproduction package
-```
-
-## Getting Started
-
-The [Getting Started](https://vaadin.com/docs/latest/getting-started) guide will quickly familiarize you with your new
-Tailwind Integration implementation. You'll learn how to set up your development environment, understand the project 
-structure, and find resources to help you add muscles to your skeleton — transforming it into a fully-featured 
-application.
+For reference, this commit contains the relevant changes: https://github.com/sissbruecker/vaadin-tailwind-proto/commit/ca192d1d954e4e32478ea0797be7c0266e6a9cdc
